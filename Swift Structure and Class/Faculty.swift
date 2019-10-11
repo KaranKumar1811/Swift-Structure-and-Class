@@ -16,13 +16,13 @@ class Faculty  {
     var bonus : Int?
     var totalSalary : Int?
     
-    
+    // convenience Initalizer is used when we want to call another initalizer inside another intializer
     convenience init(FID : Int,FirstName:String,LastName:String,Basic_Salary : Int, Bonus_ :Int)
     {
-            self.init(BasicSalary: Basic_Salary,Bonus: Bonus_)
-            self.facultyID=FID
-            self.facultyFirstName=FirstName
-            self.facultyLastName=LastName
+        self.init(BasicSalary: Basic_Salary,Bonus: Bonus_)// another intializer is called in this intializer // this is declared at line 36
+        self.facultyID=FID
+        self.facultyFirstName=FirstName
+        self.facultyLastName=LastName
     }
     
     convenience init(FID : Int,FirstName:String,LastName:String)
