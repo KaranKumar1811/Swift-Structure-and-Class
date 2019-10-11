@@ -17,11 +17,35 @@ class Faculty  {
     var totalSalary : Int?
     
     
+    convenience init(FID : Int,FirstName:String,LastName:String,Basic_Salary : Int, Bonus_ :Int)
+    {
+            self.init(BasicSalary: Basic_Salary,Bonus: Bonus_)
+            self.facultyID=FID
+            self.facultyFirstName=FirstName
+            self.facultyLastName=LastName
+    }
+    
+    convenience init(FID : Int,FirstName:String,LastName:String)
+    {
+        self.init(BasicSalary: 0,Bonus: 0)
+        self.facultyID=FID
+        self.facultyFirstName=FirstName
+        self.facultyLastName=LastName
+    }
+    
+    init(BasicSalary : Int, Bonus :Int )
+    {
+            self.basicSalary=BasicSalary
+            self.bonus=Bonus
+        self.totalSalary=0
+        
+    }
+    
     
     
     func calTotalSalary()
     {
-        totalSalary=bonus! + basicSalary!
+        self.totalSalary=self.bonus! + self.basicSalary!
     }
     
     func printData()

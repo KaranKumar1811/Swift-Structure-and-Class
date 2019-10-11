@@ -36,14 +36,27 @@ obj.printData()
 //obj1.printData()
 
 
-var f1 = Faculty()
-f1.facultyFirstName="Karan"
-f1.facultyLastName="Kumar"
-f1.facultyID=1811
-f1.basicSalary=10000
-f1.bonus=500
-f1.calTotalSalary()
-f1.printData()
+//var f1 = Faculty()
+//f1.facultyFirstName="Karan"
+//f1.facultyLastName="Kumar"
+//f1.facultyID=1811
+//f1.basicSalary=10000
+//f1.bonus=500
+//f1.calTotalSalary()
+//f1.printData()
+
+
+
+var f2=Faculty(FID: 1811,FirstName: "Sandeep",LastName: "Singh")
+f2.calTotalSalary()
+f2.printData()
+
+
+var f3=Faculty(FID: 213,FirstName: "Paras",LastName: "Kumar",Basic_Salary: 5000,Bonus_: 700 )
+f3.calTotalSalary()
+f3.printData()
+
+
 
 
 
