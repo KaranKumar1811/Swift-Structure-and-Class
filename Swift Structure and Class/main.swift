@@ -24,13 +24,16 @@ if let x = a
 
 
 
-var obj = Student(studentID: 1, studentName: "Karan")
+var obj = Student(SID: 1, SName: "Karan",Marks: ["M1":50,"M2":34,"M3":66,"M4":85,"M5":59])
+obj.calTotalMarks()
+obj.calPercentage()
+obj.determineResult()
 obj.printData()
-var obj1 = obj
+//var obj1 = obj
 
-obj.studentID=200
-obj.printData()
-obj1.printData()
+//obj.studentID=200
+//obj.printData()
+//obj1.printData()
 
 
 var f1 = Faculty()
@@ -41,6 +44,8 @@ f1.basicSalary=10000
 f1.bonus=500
 f1.calTotalSalary()
 f1.printData()
+
+
 
 
 

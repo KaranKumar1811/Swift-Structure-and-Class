@@ -17,6 +17,8 @@ class Faculty  {
     var totalSalary : Int?
     
     
+    
+    
     func calTotalSalary()
     {
         totalSalary=bonus! + basicSalary!
@@ -25,6 +27,11 @@ class Faculty  {
     func printData()
     {
         print("FacultyID :\(facultyID!)","\nFacultyFirstName :\(facultyFirstName!)","\nFacultyLastName :\(facultyLastName!)","\nBasic_Salary :\(basicSalary!)","\nBonus : \(bonus!)","\nTotal Salary : \(totalSalary!)")
+    }
+    
+    
+    deinit {                        // deinit is used to make distructor
+        print("Deinti called")
     }
     
 }
