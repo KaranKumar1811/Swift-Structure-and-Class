@@ -45,20 +45,41 @@ obj.printData()
 //f1.calTotalSalary()
 //f1.printData()
 
+var f1=Faculty(FID: 1,FirstName: "Karan",LastName: "Kumar",Basic_Salary: 15000,Bonus_: 2100 )
+//f1.calTotalSalary()
+//f1.printData()
 
-
-var f2=Faculty(FID: 1811,FirstName: "Sandeep",LastName: "Singh")
-f2.calTotalSalary()
-f2.printData()
-
-
-var f3=Faculty(FID: 213,FirstName: "Paras",LastName: "Kumar",Basic_Salary: 5000,Bonus_: 700 )
-f3.calTotalSalary()
-f3.printData()
+var f2=Faculty(FID: 2,FirstName: "Sandeep",LastName: "Singh")
 
 
 
+var f3=Faculty(FID: 3,FirstName: "Paras",LastName: "Kumar",Basic_Salary: 15000,Bonus_: 700 )
 
 
 
+var f4=Faculty(FID: 4,FirstName: "Ankita",LastName: "Jain",Basic_Salary: 15000,Bonus_: 200 )
 
+
+var f5=Faculty(FID: 5,FirstName: "Rahul",LastName: "Singh",Basic_Salary: 12000,Bonus_: 500 )
+
+
+var f6=Faculty(FID: 6,FirstName: "Shelly",LastName: "Kumar",Basic_Salary: 14000,Bonus_: 700 )
+
+
+
+var faculties=Dictionary<Int,Faculty>()
+faculties.updateValue(f1, forKey: f1.facultyID)
+faculties.updateValue(f2, forKey: f2.facultyID)
+faculties.updateValue(f3, forKey: f3.facultyID)
+faculties.updateValue(f4, forKey: f4.facultyID)
+faculties.updateValue(f5, forKey: f5.facultyID)
+faculties.updateValue(f6, forKey: f6.facultyID)
+
+
+print("************************")
+
+for f in faculties
+{   f.value.calTotalSalary()
+    f.value.printData()
+    print("***************************")
+}
