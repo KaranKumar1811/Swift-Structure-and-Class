@@ -14,7 +14,27 @@ class Faculty  {
     var facultyLastName : String?
     var basicSalary : Int?
     var bonus : Int?
-    var totalSalary : Int?
+    private var commi : Int=10
+    var commission: Int
+    {
+        get{
+            return commi
+        }
+        set(newC)
+        {
+            commi=newC
+        }
+    }
+    var totalSalary : Int
+    {
+        get{
+            return basicSalary! + bonus! + (basicSalary! * commission / 100 )
+        }
+//        set(nCommi)
+//        {
+//            commission=nCommi
+//        }
+    }
     
     // convenience Initalizer is used when we want to call another initalizer inside another intializer
     convenience init(FID : Int,FirstName:String,LastName:String,Basic_Salary : Int, Bonus_ :Int)
@@ -37,20 +57,20 @@ class Faculty  {
     {
             self.basicSalary=BasicSalary
             self.bonus=Bonus
-        self.totalSalary=0
+        //self.totalSalary=0
         
     }
     
     
     
-    func calTotalSalary()
-    {
-        self.totalSalary=self.bonus! + self.basicSalary!
-    }
-    
+//    func calTotalSalary()
+//    {
+//        self.totalSalary=self.bonus! + self.basicSalary!
+//    }
+//
     func printData()
     {
-        print("FacultyID :\(facultyID!)","\nFacultyFirstName :\(facultyFirstName!)","\nFacultyLastName :\(facultyLastName!)","\nBasic_Salary :\(basicSalary!)","\nBonus : \(bonus!)","\nTotal Salary : \(totalSalary!)")
+        print("FacultyID :\(facultyID!)","\nFacultyFirstName :\(facultyFirstName!)","\nFacultyLastName :\(facultyLastName!)","\nBasic_Salary :\(basicSalary!)","\nBonus : \(bonus!)","\nCommission : \(commission)","\nTotal Salary : \(totalSalary)")
     }
     
     

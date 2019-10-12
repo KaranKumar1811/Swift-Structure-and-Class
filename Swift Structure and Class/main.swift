@@ -55,16 +55,16 @@ var f2=Faculty(FID: 2,FirstName: "Sandeep",LastName: "Singh")
 
 var f3=Faculty(FID: 3,FirstName: "Paras",LastName: "Kumar",Basic_Salary: 15000,Bonus_: 700 )
 
-
+f3.commission=10
 
 var f4=Faculty(FID: 4,FirstName: "Ankita",LastName: "Jain",Basic_Salary: 15000,Bonus_: 200 )
-
+f4.commission=15
 
 var f5=Faculty(FID: 5,FirstName: "Rahul",LastName: "Singh",Basic_Salary: 12000,Bonus_: 500 )
-
+f5.commission=15
 
 var f6=Faculty(FID: 6,FirstName: "Shelly",LastName: "Kumar",Basic_Salary: 14000,Bonus_: 700 )
-
+f6.commission=7
 
 
 var faculties=Dictionary<Int,Faculty>()
@@ -79,7 +79,7 @@ faculties.updateValue(f6, forKey: f6.facultyID)
 print("************************")
 
 for f in faculties
-{   f.value.calTotalSalary()
+{ //  f.value.calTotalSalary()
     f.value.printData()
     print("***************************")
 }
